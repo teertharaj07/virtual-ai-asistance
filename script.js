@@ -110,6 +110,11 @@ const handleCommands = (command) => {
         window.open("calculator://")
     }
 
+    else if (command.includes("who is sagar bagdhe") || command.includes("sagar bagdhe")) {
+        speakFunc("sagar bagdhe is the best friend of Teertharaj turkar")
+        
+    }
+
 
     else{
         speakFunc(`this is,what i found on internet regarding ${command}`);
