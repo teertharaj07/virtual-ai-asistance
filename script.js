@@ -18,7 +18,7 @@ const speakFunc = (input) => {
     window.speechSynthesis.speak(speakInput);
 }
 
-img.addEventListener("click",()=>{
+img.addEventListener("click", () => {
 
     greetingFunc()
 })
@@ -68,19 +68,30 @@ const handleCommands = (command) => {
     if (command.includes("hey") || command.includes("hello") || command.includes("hi")) {
         speakFunc("Hello sir, How can I Help You !")
     }
-    else if (command.includes("who are you") || command.includes("hu r u") ){
+    else if (command.includes("who are you") || command.includes("hu r u")) {
         speakFunc("I Am Virtual Asistance, Devloped By Teerthraj Turkar !")
     }
-    else if (command.includes("what is your name") || command.includes("hu r u") ){
+    else if (command.includes("what is your name") || command.includes("hu r u")) {
         speakFunc("my name Virtual Asistance, Devloped By Teerthraj Turkar !")
     }
-    else if (command.includes("who is teerthraj turkar")|| command.includes("tirthraj")) {
+    else if (command.includes("who is teerthraj turkar") || command.includes("tirthraj")) {
         speakFunc("Teerthraj Turkar is the software devloper !")
     }
     else if (command.includes("open just for code youtubr channel") || command.includes("just for code") || command.includes("just for food")) {
         speakFunc("opening...just for code Youtube channel")
         window.open("https://www.youtube.com/@Justforcode")
     }
+
+    else if (command.includes("who is sagar bagdhe") || command.includes("sagar bagade")) {
+        speakFunc("sagar bagdhe is the best friend of Teertharaj turkar");
+
+    }
+
+    else if (command.includes("who is vimlesh bisen") || command.includes("vimlesh bisen")) {
+        speakFunc("vimlesh bisen is the best friend of Teertharaj turkar");
+
+    }
+
 
     else if (command.includes("open google") || command.includes("google")) {
         speakFunc("opening...google")
@@ -95,14 +106,14 @@ const handleCommands = (command) => {
         window.open("https://www.facebook.com")
     }
     else if (command.includes("tell me, time") || command.includes("time")) {
-        let time= new Date().toLocaleString(undefined,{hour:'numeric',minute:'numeric'})
+        let time = new Date().toLocaleString(undefined, { hour: 'numeric', minute: 'numeric' })
         speakFunc(time);
-       
+
     }
     else if (command.includes("tell me, date") || command.includes("date")) {
-        let time= new Date()
+        let time = new Date()
         speakFunc(time);
-       
+
     }
 
     else if (command.includes("open calculater") || command.includes("cal")) {
@@ -110,16 +121,13 @@ const handleCommands = (command) => {
         window.open("calculator://")
     }
 
-    else if (command.includes("who is sagar bagdhe") || command.includes("sagar bagdhe")) {
-        speakFunc("sagar bagdhe is the best friend of Teertharaj turkar")
-        
-    }
 
 
-    else{
-        speakFunc(`this is,what i found on internet regarding ${command}`);
-        window.open(`https://www.google.com/search?q=${command}`)
-    }
+
+    // else {
+    //     speakFunc(`this is,what i found on internet regarding ${command}`);
+    //     window.open(`https://www.google.com/search?q=${command}`)
+    // }
 
 
 
